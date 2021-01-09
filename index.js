@@ -86,7 +86,7 @@ function renderBox() {
 
     box.style.height = box.style.width = boxSize + 'px'
     box.style.position = 'absolute'
-    box.style.backgroundColor = getRandomColor()
+    box.style.backgroundImage = `radial-gradient(${getRandomColor()}, #ffffff, #ffffff)`
     box.style.top = getRandom(0, maxTop) + 'px'
     box.style.left = getRandom(0, maxLeft) + 'px'
     box.style.cursor = 'pointer'
@@ -100,7 +100,7 @@ function getRandom(min, max) {
 }
 
 function getRandomColor() {
-    var color = Math.floor(Math.random() * 16770000).toString(16);
+    var color = Math.floor(Math.random() * 16700000).toString(16);
 
     return '#000000'.slice(0, -color.length) + color;
 }
